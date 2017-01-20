@@ -182,7 +182,7 @@ class Python(BaseCommand):
 
 class Bash(BaseCommand):
     extension = '.sh'
-    command = 'bash'
+    command = 'csh'
 
 
 class PowershellSysnative(BaseCommand):
