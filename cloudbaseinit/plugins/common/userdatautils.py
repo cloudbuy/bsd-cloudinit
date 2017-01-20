@@ -28,6 +28,7 @@ _compile = functools.partial(re.compile, flags=re.I)
 FORMATS = (
     (_compile(br'^rem\s+cmd\s'), execcmd.Shell),
     (_compile(br'^#!\s*/usr/bin/env\s+python\s'), execcmd.Python),
+    (_compile(br'^#!\*/bin/sh'), execcmd.Sh),
     (_compile(br'^#!'), execcmd.Bash),
     (_compile(br'^#(ps1|ps1_sysnative)\s'), execcmd.PowershellSysnative),
     (_compile(br'^#ps1_x86\s'), execcmd.Powershell),

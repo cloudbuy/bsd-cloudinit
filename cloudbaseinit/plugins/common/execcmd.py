@@ -27,6 +27,7 @@ __all__ = (
     'BaseCommand',
     'Shell',
     'Python',
+    'Sh',
     'Bash',
     'Powershell',
     'PowershellSysnative',
@@ -180,9 +181,14 @@ class Python(BaseCommand):
     command = 'python'
 
 
+class Sh(BaseCommand):
+    extension = '.sh'
+    command = 'sh'
+
+
 class Bash(BaseCommand):
     extension = '.sh'
-    command = 'csh'
+    command = 'bash'
 
 
 class PowershellSysnative(BaseCommand):
